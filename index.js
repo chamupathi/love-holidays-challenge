@@ -8,7 +8,6 @@ function main() {
     if (process.argv.length !== 4) {
         console.error('Usage: ./list-flight-paths "[location1]" "[location2]"');
         process.exit(1);
-        return;
     }
 
     const start = process.argv[2];
@@ -16,7 +15,7 @@ function main() {
 
     const paths = findAllPaths(start, end, COSTS, LOCATIONS);
     
-    // Sort paths by cost (optional)
+    // Sort paths by cost
     paths.sort((a, b) => a.cost - b.cost);
     
     // Print all paths

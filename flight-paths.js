@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const { MAX_MATRIX_SIZE } = require('./constants.js');
 
 function validateMatrix(costs) {

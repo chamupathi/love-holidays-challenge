@@ -2,12 +2,25 @@
   "name": "flight-paths",
   "version": "1.0.0",
   "description": "Flight paths calculator",
-  "main": "flight-paths.js",
+  "main": "index.js",
+  "bin": {
+    "list-flight-paths": "./index.js"
+  },
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "build": "pkg . --out-path dist"
+  },
+  "pkg": {
+    "targets": [
+      "node18-linux-x64",
+      "node18-macos-x64",
+      "node18-win-x64"
+    ],
+    "outputPath": "dist"
   },
   "devDependencies": {
-    "jest": "^29.0.0"
+    "jest": "^29.0.0",
+    "pkg": "^5.8.1"
   }
 } 

@@ -10,8 +10,13 @@ This is a simple script that calculates all the paths and the cost between two l
 ```bash
 brew install node
 ```
+### Build binary
 
-### Run the script
+```bash
+npm run build
+```
+
+### Run the compiled binary
 
 ```bash
 ./bin/list-flight-paths "<start_location>" "<end_location>"

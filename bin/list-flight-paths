@@ -1,2 +1,12 @@
 #!/bin/bash
-node "$(dirname "$0")/../index.js" "$@" 
+SCRIPT_DIR="$(dirname "$0")"
+
+# Detect OS and use appropriate binary
+case "$(uname -s)" in
+    Linux*)     BINARY=flight-paths-linux;;
+    Darwin*)    BINARY=flight-paths-macos;;
+    CYGWIN*|MINGW*|MSYS*) BINARY=flight-paths-win.exe;;
+    *)          echo "Unsupported OS"; exit 1;;
+esac
+
+"$SCRIPT_DIR/../dist/$BINARY" "$@" 
