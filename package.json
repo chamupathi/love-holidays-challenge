@@ -1,0 +1,13 @@
+{
+  "name": "flight-paths",
+  "version": "1.0.0",
+  "description": "Flight paths calculator",
+  "main": "flight-paths.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+} 
